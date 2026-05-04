@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://media-konveyer.ru/</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://media-konveyer.ru/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://media-konveyer.ru/" />
+    <image:image>
+      <image:loc>https://media-konveyer.ru/assets/og.webp</image:loc>
+      <image:title>ContentFactory — фабрика контента для селлеров маркетплейсов</image:title>
+      <image:caption>AI-фабрика контента для Wildberries и Ozon</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://media-konveyer.ru/assets/hero-mockup.webp</image:loc>
+      <image:title>Контент-план в Notion и примеры постов TG/IG/VK</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://media-konveyer.ru/assets/solution-process.webp</image:loc>
+      <image:title>Процесс работы фабрики: бриф, стратегия, посты, отчёт</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://media-konveyer.ru/privacy.html</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://media-konveyer.ru/offer.html</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

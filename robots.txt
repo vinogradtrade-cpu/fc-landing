@@ -1,0 +1,33 @@
+# robots.txt — ContentFactory
+# Допуск всех поисковых ботов на весь сайт.
+# При публикации замени домен в Sitemap и Host на боевой.
+
+User-agent: *
+Allow: /
+Disallow: /assets/.DS_Store
+
+# Yandex-специфичные директивы
+User-agent: Yandex
+Allow: /
+Disallow: /assets/.DS_Store
+Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&yclid&gclid&fbclid /
+
+# Google-специфичные
+User-agent: Googlebot
+Allow: /
+Disallow: /assets/.DS_Store
+
+# AI-краулеры — оставляем доступ для упоминаний в LLM-ответах.
+# Если нужно закрыть — раскомментируй блоки ниже.
+# User-agent: GPTBot
+# Disallow: /
+# User-agent: ClaudeBot
+# Disallow: /
+# User-agent: PerplexityBot
+# Disallow: /
+
+# Карта сайта
+Sitemap: https://media-konveyer.ru/sitemap.xml
+
+# Главное зеркало (актуально для Yandex; на проде убедись, что https-версия — основная)
+Host: https://media-konveyer.ru

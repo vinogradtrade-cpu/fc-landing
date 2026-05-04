@@ -1,0 +1,1195 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Language" content="ru" />
+
+<!-- Primary SEO -->
+<title>ContentFactory — контент-машина для селлеров WB и Ozon</title>
+<meta name="description" content="Готовая партия постов, картинок и сценариев каждую неделю. Telegram, Instagram, VK, Pinterest. Пилот за 30 000 ₽." />
+<meta name="keywords" content="контент для селлеров, контент wildberries, контент ozon, фабрика контента, ai контент, smm для селлеров, посты для телеграм, ведение инстаграм, контент-план селлера, контент-стратегия, контент маркетплейсы, smm wb, smm ozon, ai генерация постов, telegram-канал селлера" />
+<meta name="author" content="ContentFactory" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="googlebot" content="index, follow" />
+<meta name="yandex" content="all" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="theme-color" content="#7C3AED" />
+
+<!-- Поисковая верификация: вставь коды после регистрации -->
+<!-- <meta name="yandex-verification" content="ВСТАВИТЬ_КОД_ИЗ_YANDEX_WEBMASTER" /> -->
+<!-- <meta name="google-site-verification" content="ВСТАВИТЬ_КОД_ИЗ_GOOGLE_SEARCH_CONSOLE" /> -->
+
+<!-- Canonical / language alternates -->
+<link rel="canonical" href="https://media-konveyer.ru/" />
+<link rel="alternate" hreflang="ru-RU" href="https://media-konveyer.ru/" />
+<link rel="alternate" hreflang="x-default" href="https://media-konveyer.ru/" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/webp" href="./assets/favicon.webp" />
+<link rel="apple-touch-icon" href="./assets/favicon.webp" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="ContentFactory" />
+<meta property="og:url" content="https://media-konveyer.ru/" />
+<meta property="og:title" content="ContentFactory — контент-машина для селлеров WB и Ozon" />
+<meta property="og:description" content="Готовая партия постов, картинок и сценариев — каждую неделю в Notion. Telegram, Instagram, VK, Pinterest. Пилот за 30 000 ₽." />
+<meta property="og:image" content="https://media-konveyer.ru/assets/og.webp" />
+<meta property="og:image:secure_url" content="https://media-konveyer.ru/assets/og.webp" />
+<meta property="og:image:type" content="image/webp" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="ContentFactory — фабрика контента для селлеров маркетплейсов" />
+<meta property="og:locale" content="ru_RU" />
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="ContentFactory — контент-машина для селлеров WB и Ozon" />
+<meta name="twitter:description" content="Готовая партия постов, картинок и сценариев каждую неделю. Пилот за 30 000 ₽." />
+<meta name="twitter:image" content="https://media-konveyer.ru/assets/og.webp" />
+<meta name="twitter:image:alt" content="ContentFactory — фабрика контента для селлеров маркетплейсов" />
+
+<!-- Preload key visuals & fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="image" href="./assets/hero-mockup.webp" fetchpriority="high" />
+<link rel="preload" as="image" href="./backgrounds/bg-hero.webp" fetchpriority="high" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+
+<!-- Tailwind via CDN (на этапе скелета; на проде — компилировать) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Inter', 'system-ui', 'sans-serif'],
+          display: ['Manrope', 'Inter', 'system-ui', 'sans-serif'],
+        },
+        colors: {
+          ink: {
+            900: '#0A0A0B',
+            700: '#262629',
+            500: '#5B5B62',
+            300: '#A8A8B0',
+            100: '#EDEDEF',
+            50: '#F7F7F8',
+          },
+          accent: {
+            DEFAULT: '#7C3AED',
+            soft: '#F3EEFF',
+            strong: '#5B21B6',
+          },
+        },
+        boxShadow: {
+          card: '0 1px 2px rgba(10,10,11,0.04), 0 8px 24px rgba(10,10,11,0.06)',
+          cta: '0 8px 30px rgba(124,58,237,0.35)',
+        },
+      },
+    },
+  };
+</script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', system-ui, sans-serif; color: #0A0A0B; background: #FFFFFF; -webkit-font-smoothing: antialiased; }
+  .font-display { font-family: 'Manrope', 'Inter', system-ui, sans-serif; letter-spacing: -0.02em; }
+
+  /* Hero gradient */
+  .hero-gradient {
+    background:
+      radial-gradient(60% 50% at 80% 0%, rgba(124,58,237,0.18) 0%, rgba(124,58,237,0) 60%),
+      radial-gradient(40% 40% at 10% 20%, rgba(99,102,241,0.12) 0%, rgba(99,102,241,0) 60%),
+      linear-gradient(180deg, #FFFFFF 0%, #FAFAFB 100%);
+  }
+  .grain::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0.4;
+    background-image: radial-gradient(rgba(10,10,11,0.04) 1px, transparent 1px);
+    background-size: 6px 6px; mix-blend-mode: multiply;
+  }
+
+  /* Reveal on scroll */
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+  /* Marquee */
+  @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  .marquee-track { animation: marquee 35s linear infinite; width: max-content; }
+  .mask-fade {
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);
+    mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);
+  }
+
+  /* FAQ details marker */
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+  details[open] .faq-icon { transform: rotate(45deg); }
+  .faq-icon { transition: transform .2s ease; }
+
+  /* Buttons */
+  .btn-primary {
+    background: #0A0A0B; color: #fff; border-radius: 12px; padding: 14px 22px; font-weight: 600;
+    transition: transform .15s ease, background .15s ease, box-shadow .2s ease;
+  }
+  .btn-primary:hover { background: #262629; transform: translateY(-1px); }
+  .btn-accent {
+    background: #7C3AED; color: #fff; border-radius: 12px; padding: 14px 22px; font-weight: 600;
+    transition: transform .15s ease, background .15s ease, box-shadow .2s ease;
+    box-shadow: 0 8px 30px rgba(124,58,237,0.35);
+  }
+  .btn-accent:hover { background: #6D28D9; transform: translateY(-1px); }
+  .btn-ghost {
+    background: transparent; color: #0A0A0B; border-radius: 12px; padding: 14px 22px; font-weight: 600;
+    border: 1px solid #E5E5EA; transition: background .15s ease, border-color .15s ease;
+  }
+  .btn-ghost:hover { background: #F7F7F8; border-color: #D4D4D8; }
+
+  /* Card */
+  .card { background: #fff; border: 1px solid #EDEDEF; border-radius: 20px; }
+
+  /* Modal */
+  .modal-backdrop { background: rgba(10,10,11,0.55); backdrop-filter: blur(6px); }
+
+  /* Inputs */
+  .input {
+    width: 100%; padding: 12px 14px; border-radius: 12px; border: 1px solid #E5E5EA;
+    font-size: 15px; background: #fff; color: #0A0A0B; transition: border-color .15s ease, box-shadow .15s ease;
+  }
+  .input:focus { outline: none; border-color: #7C3AED; box-shadow: 0 0 0 4px rgba(124,58,237,0.12); }
+  .label { font-size: 13px; font-weight: 500; color: #5B5B62; margin-bottom: 6px; display: block; }
+</style>
+
+<!-- ===================== JSON-LD: Organization ===================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ContentFactory",
+  "alternateName": "Фабрика контента",
+  "url": "https://media-konveyer.ru/",
+  "logo": "https://media-konveyer.ru/assets/favicon.webp",
+  "image": "https://media-konveyer.ru/assets/og.webp",
+  "description": "AI-фабрика контента для селлеров маркетплейсов Wildberries и Ozon. Стратегия, контент-план, посты и AI-изображения для Telegram, Instagram, VK и Pinterest.",
+  "founder": {
+    "@type": "Person",
+    "name": "Никита Эдуардович Виноградов"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Россия"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ул. Татьяны Бибиной, д. 34",
+    "addressLocality": "Саранск",
+    "addressRegion": "Республика Мордовия",
+    "postalCode": "431547",
+    "addressCountry": "RU"
+  },
+  "email": "vinogradtrade@gmail.com",
+  "vatID": "694100633128",
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "vinogradtrade@gmail.com",
+    "availableLanguage": ["Russian"]
+  }]
+}
+</script>
+
+<!-- ===================== JSON-LD: WebSite ===================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "ContentFactory",
+  "url": "https://media-konveyer.ru/",
+  "inLanguage": "ru-RU",
+  "publisher": { "@type": "Organization", "name": "ContentFactory" }
+}
+</script>
+
+<!-- ===================== JSON-LD: Service + Offers ===================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Фабрика контента для селлеров маркетплейсов",
+  "serviceType": "Контент-маркетинг для селлеров Wildberries и Ozon",
+  "description": "Стратегия, контент-план, готовые посты с AI-изображениями для Telegram, Instagram, VK и Pinterest. Адаптация под каждый канал, ежемесячный отчёт.",
+  "provider": {
+    "@type": "Organization",
+    "name": "ContentFactory",
+    "url": "https://media-konveyer.ru/"
+  },
+  "areaServed": { "@type": "Country", "name": "Россия" },
+  "audience": {
+    "@type": "BusinessAudience",
+    "audienceType": "Селлеры маркетплейсов Wildberries и Ozon"
+  },
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Пилотный месяц",
+      "description": "Пилотный месяц со скидкой 50%, чтобы проверить продукт без рисков.",
+      "price": "30000",
+      "priceCurrency": "RUB",
+      "availability": "https://schema.org/InStock",
+      "url": "https://media-konveyer.ru/#pricing"
+    },
+    {
+      "@type": "Offer",
+      "name": "Старт",
+      "description": "1 канал, 12 постов, стратегия и контент-план, AI-изображения, поддержка в чате.",
+      "price": "60000",
+      "priceCurrency": "RUB",
+      "availability": "https://schema.org/InStock",
+      "url": "https://media-konveyer.ru/#pricing"
+    },
+    {
+      "@type": "Offer",
+      "name": "Стандарт",
+      "description": "2 канала, 20 постов, стратегия, AI-изображения, сценарии для сторис и рилсов, Pinterest-пины, созвоны раз в 2 недели.",
+      "price": "90000",
+      "priceCurrency": "RUB",
+      "availability": "https://schema.org/InStock",
+      "url": "https://media-konveyer.ru/#pricing"
+    },
+    {
+      "@type": "Offer",
+      "name": "Премиум",
+      "description": "Все каналы (TG, IG, VK, Pinterest), 30 постов, email-рассылки, аналитика конкурентов, личный созвон еженедельно.",
+      "price": "130000",
+      "priceCurrency": "RUB",
+      "availability": "https://schema.org/InStock",
+      "url": "https://media-konveyer.ru/#pricing"
+    }
+  ]
+}
+</script>
+
+<!-- ===================== JSON-LD: FAQPage ===================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Сколько контента я получу за месяц?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "От 12 до 30 единиц в зависимости от тарифа. Каждый пост идёт с текстом, картинкой и CTA — публикуй без правок."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Нужны ли мне технические навыки?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Нет. Всё лежит в Notion: открываешь, копируешь, публикуешь. Если хочешь — настроим автопостинг."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Что если контент не подойдёт по тону?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "На этапе стратегии согласуем голос бренда — как пишем, как обращаемся, что нельзя. Внутри пакета — две бесплатные итерации правок. На пилоте — без ограничений."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Есть ли договор и предоплата?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да. Работаем по договору ИП/ООО, оплата по счёту. Предоплата 100 % за месяц, для пилота — то же самое."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "А если у меня нет фото товаров?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Не страшно. Используем AI-визуалы 4K и стилизованные генерации. Если нужны фото реального товара — отдельная опция со студийной съёмкой."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Подойдёт, если у меня ещё нет канала?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Идеальный момент. Помогаем с упаковкой канала с нуля и сразу даём правильное позиционирование."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Как быстро увижу результат?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Стратегия — через 3 дня. Первая партия контента — через 7–10 дней. Замеры по охватам и переходам — со 2-й недели."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Можно ли отказаться после пилота?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да. Пилот не обязывает к продолжению. Все материалы — твои, забирай и используй."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Чем вы отличаетесь от обычного SMM-агентства?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Агентство продаёт часы и креативы. Мы продаём готовый пакет под селлера маркетплейса — со стратегией, постами и сценариями, заточенными под логику покупателя WB и Ozon. Не делаем лайфстайл ради лайфстайла — делаем контент, который ведёт в карточку."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Что если я уже работаю с подрядчиком?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Возьми пилот за 30 000 ₽ — сравнишь результат за месяц. Если наш пакет даст больше при меньшей цене, перейдёшь полностью. Если нет — никто никого не уговаривает."
+      }
+    }
+  ]
+}
+</script>
+</head>
+
+<body class="antialiased">
+
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:bg-accent focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">К основному контенту</a>
+
+<!-- ===================== NAV ===================== -->
+<header class="sticky top-0 z-40 backdrop-blur bg-white/75 border-b border-ink-100/80" role="banner">
+  <div class="max-w-6xl mx-auto px-5 md:px-8 h-16 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2 font-display font-bold text-lg" aria-label="ContentFactory — главная">
+      <span class="inline-block w-2.5 h-2.5 rounded-full bg-accent" aria-hidden="true"></span>
+      ContentFactory
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-sm text-ink-700" aria-label="Основная навигация">
+      <a href="#solution" class="hover:text-ink-900 transition">Что делаем</a>
+      <a href="#how" class="hover:text-ink-900 transition">Как работает</a>
+      <a href="#pricing" class="hover:text-ink-900 transition">Тарифы</a>
+      <a href="#cases" class="hover:text-ink-900 transition">Кейсы</a>
+      <a href="#faq" class="hover:text-ink-900 transition">FAQ</a>
+    </nav>
+    <button data-open-modal class="hidden sm:inline-flex btn-accent !py-2.5 !px-4 text-sm" aria-label="Получить пилот: открыть форму заявки">
+      Получить пилот
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ===================== HERO ===================== -->
+<section class="relative hero-gradient overflow-hidden">
+  <img src="./backgrounds/bg-hero.webp" alt="" aria-hidden="true"
+       class="absolute inset-0 w-full h-full object-cover object-right-top pointer-events-none opacity-90"
+       fetchpriority="high" />
+  <!-- мягкий белый wash слева, чтобы заголовок и кнопки читались -->
+  <div class="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-white/10 pointer-events-none"></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white pointer-events-none"></div>
+  <div class="grain absolute inset-0 pointer-events-none"></div>
+  <div class="relative max-w-6xl mx-auto px-5 md:px-8 pt-16 md:pt-24 pb-14 md:pb-20">
+
+    <div class="inline-flex items-center gap-2 rounded-full bg-white/80 border border-ink-100 px-3 py-1.5 text-xs font-medium text-ink-700 mb-6 reveal">
+      <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+      Для селлеров Wildberries и Ozon
+    </div>
+
+    <h1 class="font-display font-extrabold text-5xl sm:text-6xl md:text-7xl leading-[1.02] tracking-tight max-w-4xl reveal">
+      Контент-машина для селлера.
+      <span class="block bg-gradient-to-r from-accent to-indigo-500 bg-clip-text text-transparent">
+        Один человек, четыре канала.
+      </span>
+    </h1>
+
+    <p class="mt-6 max-w-2xl text-lg md:text-xl text-ink-500 leading-relaxed reveal">
+      Готовая партия постов, картинок и сценариев — каждую неделю в Notion.
+      Telegram, Instagram, VK, Pinterest.
+    </p>
+
+    <div class="mt-8 flex flex-col sm:flex-row gap-3 reveal">
+      <button data-open-modal class="btn-accent inline-flex items-center justify-center gap-2">
+        Получить пилот за 30 000 ₽
+        <svg class="w-4 h-4" viewBox="0 0 20 20" fill="none"><path d="M5 10h10M11 6l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <a href="#solution" class="btn-ghost inline-flex items-center justify-center">Посмотреть демо</a>
+    </div>
+
+    <!-- Hero visual -->
+    <div class="mt-14 md:mt-20 relative reveal">
+      <div class="card shadow-card p-3 md:p-4 max-w-5xl mx-auto">
+        <img
+          src="./assets/hero-mockup.webp"
+          alt="ContentFactory — контент для селлеров маркетплейсов: контент-план в Notion и готовые посты для Telegram и Instagram"
+          class="w-full rounded-2xl block"
+          width="1920" height="1080"
+          fetchpriority="high"
+        />
+      </div>
+      <!-- Decorative orbs -->
+      <div class="hidden md:block absolute -left-12 top-10 w-40 h-40 rounded-full bg-accent/20 blur-3xl pointer-events-none"></div>
+      <div class="hidden md:block absolute -right-10 bottom-10 w-52 h-52 rounded-full bg-indigo-300/30 blur-3xl pointer-events-none"></div>
+    </div>
+
+    <!-- Logos marquee -->
+    <div class="mt-14 reveal">
+      <div class="text-center text-xs uppercase tracking-widest text-ink-300 mb-6">Селлеры, с которыми работаем</div>
+      <div class="overflow-hidden mask-fade">
+        <div class="marquee-track flex gap-12 items-center whitespace-nowrap text-ink-300">
+          <!-- Заглушка логотипов; заменим на реальные после первых кейсов. Содержимое дублируется для бесшовного цикла. -->
+          <span class="font-display text-2xl">[ Логотип ]</span>
+          <span class="font-display text-2xl">[ Логотип ]</span>
+          <span class="font-display text-2xl">[ Логотип ]</span>
+          <span class="font-display text-2xl">[ Логотип ]</span>
+          <span class="font-display text-2xl">[ Логотип ]</span>
+          <span class="font-display text-2xl">[ Логотип ]</span>
+          <span class="font-display text-2xl">[ Логотип ]</span>
+          <span class="font-display text-2xl">[ Логотип ]</span>
+          <span class="font-display text-2xl">[ Логотип ]</span>
+          <span class="font-display text-2xl">[ Логотип ]</span>
+          <span class="font-display text-2xl" aria-hidden="true">[ Логотип ]</span>
+          <span class="font-display text-2xl" aria-hidden="true">[ Логотип ]</span>
+          <span class="font-display text-2xl" aria-hidden="true">[ Логотип ]</span>
+          <span class="font-display text-2xl" aria-hidden="true">[ Логотип ]</span>
+          <span class="font-display text-2xl" aria-hidden="true">[ Логотип ]</span>
+          <span class="font-display text-2xl" aria-hidden="true">[ Логотип ]</span>
+          <span class="font-display text-2xl" aria-hidden="true">[ Логотип ]</span>
+          <span class="font-display text-2xl" aria-hidden="true">[ Логотип ]</span>
+          <span class="font-display text-2xl" aria-hidden="true">[ Логотип ]</span>
+          <span class="font-display text-2xl" aria-hidden="true">[ Логотип ]</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== ЭКРАН 2: БОЛЬ ===================== -->
+<section class="py-20 md:py-28 border-t border-ink-100">
+  <div class="max-w-6xl mx-auto px-5 md:px-8">
+    <div class="max-w-3xl reveal">
+      <div class="text-sm font-medium text-accent uppercase tracking-widest mb-3">Проблема</div>
+      <h2 class="font-display font-extrabold text-4xl md:text-5xl tracking-tight leading-tight">
+        Почему контент не работает у большинства селлеров
+      </h2>
+    </div>
+
+    <div class="mt-12 grid md:grid-cols-3 gap-5">
+      <!-- Pain 1 -->
+      <div class="card p-7 reveal">
+        <div class="w-11 h-11 rounded-xl bg-ink-50 flex items-center justify-center mb-5">
+          <svg class="w-5 h-5 text-ink-700" viewBox="0 0 24 24" fill="none"><path d="M12 7v5l3 2M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </div>
+        <h3 class="font-display font-bold text-xl mb-2">Делаешь сам, потому что некому</h3>
+        <p class="text-ink-500 leading-relaxed">
+          На тебе заказы, поставщики, рекламный кабинет, общение с менеджером WB. Вечером уже не до постов. В субботу пишешь что попало — лишь бы было.
+        </p>
+      </div>
+
+      <!-- Pain 2 -->
+      <div class="card p-7 reveal">
+        <div class="w-11 h-11 rounded-xl bg-ink-50 flex items-center justify-center mb-5">
+          <svg class="w-5 h-5 text-ink-700" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </div>
+        <h3 class="font-display font-bold text-xl mb-2">Подрядчики не понимают маркетплейсы</h3>
+        <p class="text-ink-500 leading-relaxed">
+          Агентство берёт 80 тысяч и приносит «креативы для лайфстайла». Они не знают, как считается юнитка, и не понимают, что покупатель WB — это не фоловер из Insta.
+        </p>
+      </div>
+
+      <!-- Pain 3 -->
+      <div class="card p-7 reveal">
+        <div class="w-11 h-11 rounded-xl bg-ink-50 flex items-center justify-center mb-5">
+          <svg class="w-5 h-5 text-ink-700" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v6H4zM4 14h10v6H4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 class="font-display font-bold text-xl mb-2">Сервисы выдают воду</h3>
+        <p class="text-ink-500 leading-relaxed">
+          Генераторы постов делают одинаковые тексты для всех. Ни голоса, ни смысла, ни продаж. Аудитория видит шаблон за версту и пролистывает.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ЭКРАН 3: РЕШЕНИЕ ===================== -->
+<section id="solution" class="relative py-20 md:py-28 border-y border-ink-100 overflow-hidden bg-ink-50/60">
+  <img src="./backgrounds/bg-solution.webp" alt="" aria-hidden="true"
+       class="absolute inset-0 w-full h-full object-cover pointer-events-none opacity-60" loading="lazy" />
+  <div class="absolute inset-0 bg-white/80 pointer-events-none"></div>
+  <div class="relative max-w-6xl mx-auto px-5 md:px-8">
+    <div class="grid md:grid-cols-2 gap-14 items-start">
+
+      <div class="reveal">
+        <div class="text-sm font-medium text-accent uppercase tracking-widest mb-3">Решение</div>
+        <h2 class="font-display font-extrabold text-4xl md:text-5xl tracking-tight leading-tight">
+          Что делает наша фабрика контента
+        </h2>
+        <p class="mt-5 text-ink-500 text-lg leading-relaxed">
+          Заменяем штатного маркетолога, копирайтера и дизайнера. Стоит как 1/3 младшего маркетолога — делает работу троих.
+        </p>
+
+        <div class="mt-8 grid sm:grid-cols-2 gap-5">
+          <div class="reveal">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="w-7 h-7 rounded-lg bg-accent/10 text-accent flex items-center justify-center text-sm font-bold">01</span>
+              <h4 class="font-display font-bold">Стратегия и позиционирование</h4>
+            </div>
+            <p class="text-sm text-ink-500 leading-relaxed">Что говорить и каким голосом — в каждом канале по-своему.</p>
+          </div>
+          <div class="reveal">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="w-7 h-7 rounded-lg bg-accent/10 text-accent flex items-center justify-center text-sm font-bold">02</span>
+              <h4 class="font-display font-bold">Контент-план на месяц</h4>
+            </div>
+            <p class="text-sm text-ink-500 leading-relaxed">Темы, форматы и календарь — на 30 дней вперёд.</p>
+          </div>
+          <div class="reveal">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="w-7 h-7 rounded-lg bg-accent/10 text-accent flex items-center justify-center text-sm font-bold">03</span>
+              <h4 class="font-display font-bold">Готовые посты с CTA</h4>
+            </div>
+            <p class="text-sm text-ink-500 leading-relaxed">Текст, картинка и призыв к действию — публикуй без правок.</p>
+          </div>
+          <div class="reveal">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="w-7 h-7 rounded-lg bg-accent/10 text-accent flex items-center justify-center text-sm font-bold">04</span>
+              <h4 class="font-display font-bold">Адаптация под каналы</h4>
+            </div>
+            <p class="text-sm text-ink-500 leading-relaxed">Один смысл — четыре формата под Telegram, Instagram, VK и Pinterest.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="card shadow-card overflow-hidden">
+          <img
+            src="./assets/solution-process.webp"
+            alt="Цикл фабрики контента: бриф, стратегия, посты, отчёт"
+            class="block w-full aspect-square object-cover"
+            loading="lazy"
+            width="1200" height="1200"
+          />
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ЭКРАН 4: КАК РАБОТАЕТ ===================== -->
+<section id="how" class="relative py-20 md:py-28 overflow-hidden">
+  <img src="./backgrounds/bg-how.webp" alt="" aria-hidden="true"
+       class="absolute inset-0 w-full h-full object-cover pointer-events-none opacity-50" loading="lazy" />
+  <div class="absolute inset-0 bg-white/85 pointer-events-none"></div>
+  <div class="relative max-w-6xl mx-auto px-5 md:px-8">
+    <div class="max-w-3xl reveal">
+      <div class="text-sm font-medium text-accent uppercase tracking-widest mb-3">Процесс</div>
+      <h2 class="font-display font-extrabold text-4xl md:text-5xl tracking-tight leading-tight">
+        Как мы работаем
+      </h2>
+    </div>
+
+    <div class="mt-14 grid md:grid-cols-4 gap-6 relative">
+      <!-- connector line -->
+      <div class="hidden md:block absolute top-6 left-[12%] right-[12%] h-px bg-gradient-to-r from-transparent via-ink-100 to-transparent"></div>
+
+      <div class="relative reveal">
+        <div class="w-12 h-12 rounded-full bg-white border border-ink-100 flex items-center justify-center font-display font-bold text-lg shadow-card mb-5">1</div>
+        <h4 class="font-display font-bold text-lg mb-2">Заполняешь бриф</h4>
+        <p class="text-ink-500 text-sm leading-relaxed">Открываешь гугл-форму, отвечаешь на 8 вопросов про бренд и каналы. 20 минут — без созвонов и интервью.</p>
+      </div>
+
+      <div class="relative reveal">
+        <div class="w-12 h-12 rounded-full bg-white border border-ink-100 flex items-center justify-center font-display font-bold text-lg shadow-card mb-5">2</div>
+        <h4 class="font-display font-bold text-lg mb-2">Получаешь стратегию</h4>
+        <p class="text-ink-500 text-sm leading-relaxed">Через 3 дня присылаем позиционирование, рубрикатор и контент-план на месяц на согласование.</p>
+      </div>
+
+      <div class="relative reveal">
+        <div class="w-12 h-12 rounded-full bg-white border border-ink-100 flex items-center justify-center font-display font-bold text-lg shadow-card mb-5">3</div>
+        <h4 class="font-display font-bold text-lg mb-2">Утверждаешь план</h4>
+        <p class="text-ink-500 text-sm leading-relaxed">Правишь, что не подходит. После апрува берём в работу полный пакет на месяц.</p>
+      </div>
+
+      <div class="relative reveal">
+        <div class="w-12 h-12 rounded-full bg-accent text-white flex items-center justify-center font-display font-bold text-lg shadow-cta mb-5">4</div>
+        <h4 class="font-display font-bold text-lg mb-2">Забираешь готовый пакет</h4>
+        <p class="text-ink-500 text-sm leading-relaxed">Каждую неделю открываешь Notion и копируешь готовые посты с картинками. Без правок.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ЭКРАН 5: ЧТО ВХОДИТ ===================== -->
+<section class="relative py-20 md:py-28 bg-ink-900 text-white overflow-hidden">
+  <img src="./backgrounds/bg-package.webp" alt="" aria-hidden="true"
+       class="absolute inset-0 w-full h-full object-cover pointer-events-none opacity-55" loading="lazy" />
+  <!-- тёмный wash для читаемости списка преимуществ -->
+  <div class="absolute inset-0 bg-gradient-to-r from-ink-900/90 via-ink-900/70 to-ink-900/85 pointer-events-none"></div>
+  <!-- остаточные orbs для глубины -->
+  <div class="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-accent/20 blur-3xl pointer-events-none"></div>
+
+  <div class="relative max-w-6xl mx-auto px-5 md:px-8">
+    <div class="max-w-3xl reveal">
+      <div class="text-sm font-medium text-accent uppercase tracking-widest mb-3">Состав пакета</div>
+      <h2 class="font-display font-extrabold text-4xl md:text-5xl tracking-tight leading-tight">
+        В каждом месячном пакете
+      </h2>
+      <p class="mt-5 text-ink-300 text-lg leading-relaxed">
+        Всё, чтобы перекрыть четыре канала и снять зависимость от рекламы маркетплейса.
+      </p>
+    </div>
+
+    <ul class="mt-12 grid md:grid-cols-2 gap-x-10 gap-y-5">
+      <!-- 10 пунктов -->
+      <li class="flex items-start gap-3 reveal">
+        <span class="mt-1.5 w-5 h-5 rounded-full bg-accent flex items-center justify-center shrink-0">
+          <svg class="w-3 h-3 text-white" viewBox="0 0 12 12" fill="none"><path d="M2 6.5l3 3 5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="text-lg">Контент-стратегия и позиционирование бренда</span>
+      </li>
+      <li class="flex items-start gap-3 reveal">
+        <span class="mt-1.5 w-5 h-5 rounded-full bg-accent flex items-center justify-center shrink-0">
+          <svg class="w-3 h-3 text-white" viewBox="0 0 12 12" fill="none"><path d="M2 6.5l3 3 5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="text-lg">Контент-план на месяц (12–16 единиц контента)</span>
+      </li>
+      <li class="flex items-start gap-3 reveal">
+        <span class="mt-1.5 w-5 h-5 rounded-full bg-accent flex items-center justify-center shrink-0">
+          <svg class="w-3 h-3 text-white" viewBox="0 0 12 12" fill="none"><path d="M2 6.5l3 3 5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="text-lg">Готовые посты с текстом и CTA</span>
+      </li>
+      <li class="flex items-start gap-3 reveal">
+        <span class="mt-1.5 w-5 h-5 rounded-full bg-accent flex items-center justify-center shrink-0">
+          <svg class="w-3 h-3 text-white" viewBox="0 0 12 12" fill="none"><path d="M2 6.5l3 3 5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="text-lg">AI-визуалы 4K — фоны, мокапы, стилизация</span>
+      </li>
+      <li class="flex items-start gap-3 reveal">
+        <span class="mt-1.5 w-5 h-5 rounded-full bg-accent flex items-center justify-center shrink-0">
+          <svg class="w-3 h-3 text-white" viewBox="0 0 12 12" fill="none"><path d="M2 6.5l3 3 5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="text-lg">Готовые сценарии рилсов и сторис, кадр-в-кадр</span>
+      </li>
+      <li class="flex items-start gap-3 reveal">
+        <span class="mt-1.5 w-5 h-5 rounded-full bg-accent flex items-center justify-center shrink-0">
+          <svg class="w-3 h-3 text-white" viewBox="0 0 12 12" fill="none"><path d="M2 6.5l3 3 5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="text-lg">3 версии каждого поста (Telegram / Instagram / VK)</span>
+      </li>
+      <li class="flex items-start gap-3 reveal">
+        <span class="mt-1.5 w-5 h-5 rounded-full bg-accent flex items-center justify-center shrink-0">
+          <svg class="w-3 h-3 text-white" viewBox="0 0 12 12" fill="none"><path d="M2 6.5l3 3 5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="text-lg">Pinterest-пины (по запросу)</span>
+      </li>
+      <li class="flex items-start gap-3 reveal">
+        <span class="mt-1.5 w-5 h-5 rounded-full bg-accent flex items-center justify-center shrink-0">
+          <svg class="w-3 h-3 text-white" viewBox="0 0 12 12" fill="none"><path d="M2 6.5l3 3 5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="text-lg">Подписи к карточкам товаров на маркетплейсе</span>
+      </li>
+      <li class="flex items-start gap-3 reveal">
+        <span class="mt-1.5 w-5 h-5 rounded-full bg-accent flex items-center justify-center shrink-0">
+          <svg class="w-3 h-3 text-white" viewBox="0 0 12 12" fill="none"><path d="M2 6.5l3 3 5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="text-lg">Шаблоны ответов на типовые комментарии и DM</span>
+      </li>
+      <li class="flex items-start gap-3 reveal">
+        <span class="mt-1.5 w-5 h-5 rounded-full bg-accent flex items-center justify-center shrink-0">
+          <svg class="w-3 h-3 text-white" viewBox="0 0 12 12" fill="none"><path d="M2 6.5l3 3 5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="text-lg">Ежемесячный отчёт и корректировка стратегии</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== ЭКРАН 6: ТАРИФЫ ===================== -->
+<section id="pricing" class="py-20 md:py-28">
+  <div class="max-w-6xl mx-auto px-5 md:px-8">
+    <div class="max-w-3xl reveal">
+      <div class="text-sm font-medium text-accent uppercase tracking-widest mb-3">Тарифы</div>
+      <h2 class="font-display font-extrabold text-4xl md:text-5xl tracking-tight leading-tight">
+        Прозрачная стоимость
+      </h2>
+      <p class="mt-5 text-ink-500 text-lg leading-relaxed">
+        Без скрытых доплат и переменных метрик. Один фикс в месяц — весь пакет.
+      </p>
+    </div>
+
+    <div class="mt-14 grid md:grid-cols-3 gap-6">
+      <!-- Старт -->
+      <div class="card p-7 flex flex-col reveal">
+        <div class="text-sm font-medium text-ink-500 mb-3">Старт</div>
+        <div class="font-display font-extrabold text-4xl tracking-tight">60 000 ₽<span class="text-lg font-medium text-ink-500"> /мес</span></div>
+        <p class="text-sm text-ink-500 mt-3">Если у тебя один канал, и нужно проверить гипотезу.</p>
+        <ul class="mt-6 space-y-3 text-sm">
+          <li class="flex gap-2 items-start"><span class="text-accent">✓</span> 1 канал</li>
+          <li class="flex gap-2 items-start"><span class="text-accent">✓</span> 12 постов</li>
+          <li class="flex gap-2 items-start"><span class="text-accent">✓</span> Стратегия и контент-план</li>
+          <li class="flex gap-2 items-start"><span class="text-accent">✓</span> AI-визуалы</li>
+          <li class="flex gap-2 items-start"><span class="text-accent">✓</span> Поддержка в чате</li>
+        </ul>
+        <button data-open-modal class="btn-ghost mt-8">Взять Старт — 60 000 ₽</button>
+      </div>
+
+      <!-- Стандарт -->
+      <div class="card p-7 flex flex-col relative ring-2 ring-accent shadow-card reveal">
+        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">Популярный</div>
+        <div class="text-sm font-medium text-accent mb-3">Стандарт</div>
+        <div class="font-display font-extrabold text-4xl tracking-tight">90 000 ₽<span class="text-lg font-medium text-ink-500"> /мес</span></div>
+        <p class="text-sm text-ink-500 mt-3">Когда нужно перекрыть Telegram + Instagram и больше не отвлекаться на контент.</p>
+        <ul class="mt-6 space-y-3 text-sm">
+          <li class="flex gap-2 items-start"><span class="text-accent">✓</span> 2 канала</li>
+          <li class="flex gap-2 items-start"><span class="text-accent">✓</span> 20 постов</li>
+          <li class="flex gap-2 items-start"><span class="text-accent">✓</span> Стратегия и контент-план</li>
+          <li class="flex gap-2 items-start"><span class="text-accent">✓</span> AI-визуалы</li>
+          <li class="flex gap-2 items-start"><span class="text-accent">✓</span> Сценарии сторис и рилсов</li>
+          <li class="flex gap-2 items-start"><span class="text-accent">✓</span> Pinterest (10 пинов)</li>
+          <li class="flex gap-2 items-start"><span class="text-accent">✓</span> Созвон раз в 2 недели</li>
+        </ul>
+        <button data-open-modal class="btn-accent mt-8">Взять Стандарт</button>
+      </div>
+
+      <!-- Премиум -->
+      <div class="card p-7 flex flex-col reveal">
+        <div class="text-sm font-medium text-ink-500 mb-3">Премиум</div>
+        <div class="font-display font-extrabold text-4xl tracking-tight">130 000 ₽<span class="text-lg font-medium text-ink-500"> /мес</span></div>
+        <p class="text-sm text-ink-500 mt-3">Полная замена контент-команды. Когда нет ни маркетолога, ни SMM-щика.</p>
+        <ul class="mt-6 space-y-3 text-sm">
+          <li class="flex gap-2 items-start"><span class="text-accent">✓</span> Все 4 канала</li>
+          <li class="flex gap-2 items-start"><span class="text-accent">✓</span> 30 постов + полный пакет</li>
+          <li class="flex gap-2 items-start"><span class="text-accent">✓</span> Email-рассылки 4 шт/мес</li>
+          <li class="flex gap-2 items-start"><span class="text-accent">✓</span> Аналитика конкурентов</li>
+          <li class="flex gap-2 items-start"><span class="text-accent">✓</span> Личный созвон еженедельно</li>
+          <li class="flex gap-2 items-start"><span class="text-accent">✓</span> Приоритетная поддержка</li>
+        </ul>
+        <button data-open-modal class="btn-ghost mt-8">Перейти на Премиум</button>
+      </div>
+    </div>
+
+    <!-- Pilot banner -->
+    <div class="mt-10 reveal">
+      <div class="card p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-10 bg-gradient-to-br from-accent/10 via-white to-indigo-50 border-accent/30">
+        <div class="shrink-0 inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-accent text-white font-display font-bold text-xl shadow-cta">
+          ★
+        </div>
+        <div class="flex-1">
+          <div class="font-display font-extrabold text-2xl md:text-3xl tracking-tight">Пилотный месяц — 30 000 ₽</div>
+          <p class="text-ink-500 mt-2 max-w-2xl leading-relaxed">
+            Половина обычной цены, чтобы проверить продукт без рисков. Если не подойдёт — забираешь все материалы и уходишь. Никаких подписок и обязательств.
+          </p>
+        </div>
+        <button data-open-modal class="btn-accent w-full md:w-auto whitespace-nowrap">Получить пилот</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ЭКРАН 7: КЕЙСЫ ===================== -->
+<section id="cases" class="relative py-20 md:py-28 border-y border-ink-100 overflow-hidden bg-ink-50/60">
+  <img src="./backgrounds/bg-cases.webp" alt="" aria-hidden="true"
+       class="absolute inset-0 w-full h-full object-cover pointer-events-none opacity-40" loading="lazy" />
+  <div class="absolute inset-0 bg-white/85 pointer-events-none"></div>
+  <div class="relative max-w-6xl mx-auto px-5 md:px-8">
+    <div class="max-w-3xl reveal">
+      <div class="text-sm font-medium text-accent uppercase tracking-widest mb-3">Кейсы</div>
+      <h2 class="font-display font-extrabold text-4xl md:text-5xl tracking-tight leading-tight">
+        Что получают селлеры
+      </h2>
+      <p class="mt-4 text-sm text-ink-500 italic">Демо-кейсы по гипотезам. Реальные результаты предоставим после первых пилотов.</p>
+    </div>
+
+    <div class="mt-14 space-y-12">
+      <!-- Case 1 -->
+      <article class="grid md:grid-cols-5 gap-8 items-start reveal">
+        <div class="md:col-span-2 space-y-3">
+          <div class="text-sm text-ink-500 uppercase tracking-wider">Кейс №1</div>
+          <h3 class="font-display font-extrabold text-2xl md:text-3xl tracking-tight">Селлер одежды, оборот 3 млн ₽</h3>
+          <div class="space-y-2 text-ink-500 leading-relaxed text-[15px]">
+            <p><span class="font-semibold text-ink-900">Задача:</span> вырастить присутствие в Telegram и Instagram, чтобы снять зависимость от рекламы внутри WB.</p>
+            <p><span class="font-semibold text-ink-900">Сделали:</span> позиционирование «осознанная база», 24 поста за месяц, 4 рилса со сценариями.</p>
+            <p><span class="font-semibold text-ink-900">Результат:</span> +1 200 подписчиков в TG за месяц, доля внешнего трафика выросла с 4 % до 18 %, рилсы суммарно набрали 280 000 просмотров.</p>
+          </div>
+        </div>
+        <div class="md:col-span-3 grid grid-cols-3 gap-3">
+          <img src="./assets/case1-tg.webp" alt="Контент для селлера маркетплейса: пост в Telegram-канале «Осознанная база»"
+               class="w-full aspect-[3/4] object-cover rounded-xl bg-white" loading="lazy" width="900" height="1200" />
+          <img src="./assets/case1-ig.webp" alt="Контент для селлера WB: пост в Instagram «БАЗА. КОТОРАЯ РАБОТАЕТ.»"
+               class="w-full aspect-[3/4] object-cover rounded-xl bg-white" loading="lazy" width="900" height="1200" />
+          <img src="./assets/case1-reels.webp" alt="Контент для селлера маркетплейса: кадр Reels «Один тренч, три образа»"
+               class="w-full aspect-[3/4] object-cover rounded-xl bg-white" loading="lazy" width="900" height="1200" />
+        </div>
+      </article>
+
+      <!-- Case 2 -->
+      <article class="grid md:grid-cols-5 gap-8 items-start reveal">
+        <div class="md:col-span-3 grid grid-cols-3 gap-3 order-2 md:order-1">
+          <img src="./assets/case2-tg.webp" alt="Контент для селлера товаров для дома: пост в Telegram-канале «Уют без хаоса»"
+               class="w-full aspect-[3/4] object-cover rounded-xl bg-white" loading="lazy" width="900" height="1200" />
+          <img src="./assets/case2-ig.webp" alt="Контент для селлера Ozon: пост в Instagram «До / После»"
+               class="w-full aspect-[3/4] object-cover rounded-xl bg-white" loading="lazy" width="900" height="1200" />
+          <img src="./assets/case2-reels.webp" alt="Контент для селлера WB: кадр Reels «Порядок за 7 минут»"
+               class="w-full aspect-[3/4] object-cover rounded-xl bg-white" loading="lazy" width="900" height="1200" />
+        </div>
+        <div class="md:col-span-2 space-y-3 order-1 md:order-2">
+          <div class="text-sm text-ink-500 uppercase tracking-wider">Кейс №2</div>
+          <h3 class="font-display font-extrabold text-2xl md:text-3xl tracking-tight">Селлер товаров для дома, оборот 6 млн ₽</h3>
+          <div class="space-y-2 text-ink-500 leading-relaxed text-[15px]">
+            <p><span class="font-semibold text-ink-900">Задача:</span> увеличить повторные покупки и отзывы через прогрев в TG-канале.</p>
+            <p><span class="font-semibold text-ink-900">Сделали:</span> рубрикатор «уют без хаоса», AI-визуалы интерьеров, серия из 6 рилсов.</p>
+            <p><span class="font-semibold text-ink-900">Результат:</span> CTR в карточки WB из канала вырос в 2,4 раза, +35 % отзывов, средний чек на повторных покупках +18 %.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Case 3 -->
+      <article class="grid md:grid-cols-5 gap-8 items-start reveal">
+        <div class="md:col-span-2 space-y-3">
+          <div class="text-sm text-ink-500 uppercase tracking-wider">Кейс №3</div>
+          <h3 class="font-display font-extrabold text-2xl md:text-3xl tracking-tight">Селлер косметики, оборот 1,8 млн ₽</h3>
+          <div class="space-y-2 text-ink-500 leading-relaxed text-[15px]">
+            <p><span class="font-semibold text-ink-900">Задача:</span> запустить Telegram с нуля параллельно с релизом новой линейки.</p>
+            <p><span class="font-semibold text-ink-900">Сделали:</span> упаковка канала, 16 постов и 8 сторис, 3 рилса под трендовые звуки.</p>
+            <p><span class="font-semibold text-ink-900">Результат:</span> +850 подписчиков за 21 день, 4 заказа пришли напрямую через канал в первую неделю, доля внешнего трафика на 4-й неделе — 11 %.</p>
+          </div>
+        </div>
+        <div class="md:col-span-3 grid grid-cols-3 gap-3">
+          <img src="./assets/case3-tg.webp" alt="Контент для селлера косметики: пост в Telegram-канале о запуске новой линейки"
+               class="w-full aspect-[3/4] object-cover rounded-xl bg-white" loading="lazy" width="900" height="1200" />
+          <img src="./assets/case3-ig.webp" alt="Контент для селлера WB: пост в Instagram бьюти-бренда"
+               class="w-full aspect-[3/4] object-cover rounded-xl bg-white" loading="lazy" width="900" height="1200" />
+          <img src="./assets/case3-reels.webp" alt="Контент для селлера маркетплейса: кадр Reels под трендовый звук"
+               class="w-full aspect-[3/4] object-cover rounded-xl bg-white" loading="lazy" width="900" height="1200" />
+        </div>
+      </article>
+
+      <!-- Case 4 -->
+      <article class="grid md:grid-cols-5 gap-8 items-start reveal">
+        <div class="md:col-span-3 grid grid-cols-3 gap-3 order-2 md:order-1">
+          <img src="./assets/case4-pin1.webp" alt="Контент для селлера автоаксессуаров: Pinterest-пин по категории «интерьер»"
+               class="w-full aspect-[3/4] object-cover rounded-xl bg-white" loading="lazy" width="900" height="1200" />
+          <img src="./assets/case4-pin2.webp" alt="Контент для селлера WB: Pinterest-пин по категории «автохимия и уход»"
+               class="w-full aspect-[3/4] object-cover rounded-xl bg-white" loading="lazy" width="900" height="1200" />
+          <img src="./assets/case4-pin3.webp" alt="Контент для селлера маркетплейса: Pinterest-пин по категории «tech-гаджеты»"
+               class="w-full aspect-[3/4] object-cover rounded-xl bg-white" loading="lazy" width="900" height="1200" />
+        </div>
+        <div class="md:col-span-2 space-y-3 order-1 md:order-2">
+          <div class="text-sm text-ink-500 uppercase tracking-wider">Кейс №4</div>
+          <h3 class="font-display font-extrabold text-2xl md:text-3xl tracking-tight">Селлер аксессуаров для авто, оборот 4,5 млн ₽</h3>
+          <div class="space-y-2 text-ink-500 leading-relaxed text-[15px]">
+            <p><span class="font-semibold text-ink-900">Задача:</span> Pinterest как канал первичного спроса для нишевого товара.</p>
+            <p><span class="font-semibold text-ink-900">Сделали:</span> 80 пинов с AI-визуалами под три ключевые категории.</p>
+            <p><span class="font-semibold text-ink-900">Результат:</span> +12 600 показов в месяц на пинах, 320 переходов на карточки WB, CPM в 7 раз дешевле, чем внутренняя реклама WB.</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ЭКРАН 8: ОБ ОСНОВАТЕЛЕ ===================== -->
+<section class="py-20 md:py-28">
+  <div class="max-w-5xl mx-auto px-5 md:px-8">
+    <div class="grid md:grid-cols-5 gap-10 md:gap-14 items-center">
+      <div class="md:col-span-2 reveal">
+        <div class="relative">
+          <img
+            src="./assets/founder.webp"
+            alt="Никита, основатель ContentFactory"
+            class="w-full aspect-[4/5] object-cover rounded-3xl shadow-card"
+            loading="lazy"
+            width="1200" height="1500"
+          />
+          <!-- Декоративная фиолетовая капля сзади -->
+          <div class="hidden md:block absolute -z-10 -bottom-6 -right-6 w-40 h-40 rounded-full bg-accent/30 blur-3xl pointer-events-none"></div>
+        </div>
+      </div>
+      <div class="md:col-span-3 reveal">
+        <div class="text-sm font-medium text-accent uppercase tracking-widest mb-3">Об основателе</div>
+        <h2 class="font-display font-extrabold text-4xl md:text-5xl tracking-tight leading-tight">
+          Почему именно мы
+        </h2>
+        <p class="mt-6 text-lg text-ink-700 leading-relaxed">
+          <span class="font-semibold">Никита, больше 5 лет на маркетплейсах.</span>
+          Суммарный оборот собственных проектов — 250 млн ₽.
+        </p>
+        <p class="mt-4 text-ink-500 leading-relaxed">
+          Прошёл путь от первой партии на 50 тысяч до пяти брендов в категориях «одежда» и «аксессуары». Знаю, как селлер зарабатывает и где теряет деньги, потому что был на твоём месте — и до сих пор там.
+        </p>
+        <p class="mt-4 text-ink-500 leading-relaxed">
+          ContentFactory родилась из моей собственной боли. Я сам три года искал «фабрику контента» под маркетплейсы — чтобы не нанимать SMM, не переплачивать агентствам и не писать посты по ночам. Такой не было. Сделал сам.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#" class="btn-ghost !py-2.5 !px-4 text-sm">Telegram</a>
+          <a href="#" class="btn-ghost !py-2.5 !px-4 text-sm">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ЭКРАН 9: FAQ ===================== -->
+<section id="faq" class="relative py-20 md:py-28 border-y border-ink-100 overflow-hidden bg-ink-50/60">
+  <img src="./backgrounds/bg-faq.webp" alt="" aria-hidden="true"
+       class="absolute inset-0 w-full h-full object-cover pointer-events-none opacity-35" loading="lazy" />
+  <div class="absolute inset-0 bg-white/70 pointer-events-none"></div>
+  <div class="relative max-w-3xl mx-auto px-5 md:px-8">
+    <div class="reveal">
+      <div class="text-sm font-medium text-accent uppercase tracking-widest mb-3">FAQ</div>
+      <h2 class="font-display font-extrabold text-4xl md:text-5xl tracking-tight leading-tight">
+        Часто задаваемые вопросы
+      </h2>
+    </div>
+
+    <div class="mt-12 space-y-3">
+      <details class="card p-5 group reveal">
+        <summary class="flex items-center justify-between gap-4">
+          <span class="font-display font-bold text-lg">Сколько контента я получу за месяц?</span>
+          <span class="faq-icon text-ink-500 text-2xl leading-none">+</span>
+        </summary>
+        <p class="mt-3 text-ink-500 leading-relaxed">
+          От 12 до 30 единиц в зависимости от тарифа. Каждый пост идёт с текстом, картинкой и CTA — публикуй без правок.
+        </p>
+      </details>
+
+      <details class="card p-5 group reveal">
+        <summary class="flex items-center justify-between gap-4">
+          <span class="font-display font-bold text-lg">Нужны ли мне технические навыки?</span>
+          <span class="faq-icon text-ink-500 text-2xl leading-none">+</span>
+        </summary>
+        <p class="mt-3 text-ink-500 leading-relaxed">
+          Нет. Всё лежит в Notion: открываешь, копируешь, публикуешь. Если хочешь — настроим автопостинг.
+        </p>
+      </details>
+
+      <details class="card p-5 group reveal">
+        <summary class="flex items-center justify-between gap-4">
+          <span class="font-display font-bold text-lg">Что если контент не подойдёт по тону?</span>
+          <span class="faq-icon text-ink-500 text-2xl leading-none">+</span>
+        </summary>
+        <p class="mt-3 text-ink-500 leading-relaxed">
+          На этапе стратегии согласуем голос бренда — как пишем, как обращаемся, что нельзя. Внутри пакета — две бесплатные итерации правок. На пилоте — без ограничений.
+        </p>
+      </details>
+
+      <details class="card p-5 group reveal">
+        <summary class="flex items-center justify-between gap-4">
+          <span class="font-display font-bold text-lg">Есть ли договор и предоплата?</span>
+          <span class="faq-icon text-ink-500 text-2xl leading-none">+</span>
+        </summary>
+        <p class="mt-3 text-ink-500 leading-relaxed">
+          Да. Работаем по договору ИП/ООО, оплата по счёту. Предоплата 100 % за месяц, для пилота — то же самое.
+        </p>
+      </details>
+
+      <details class="card p-5 group reveal">
+        <summary class="flex items-center justify-between gap-4">
+          <span class="font-display font-bold text-lg">А если у меня нет фото товаров?</span>
+          <span class="faq-icon text-ink-500 text-2xl leading-none">+</span>
+        </summary>
+        <p class="mt-3 text-ink-500 leading-relaxed">
+          Не страшно. Используем AI-визуалы 4K и стилизованные генерации. Если нужны фото реального товара — отдельная опция со студийной съёмкой.
+        </p>
+      </details>
+
+      <details class="card p-5 group reveal">
+        <summary class="flex items-center justify-between gap-4">
+          <span class="font-display font-bold text-lg">Подойдёт, если у меня ещё нет канала?</span>
+          <span class="faq-icon text-ink-500 text-2xl leading-none">+</span>
+        </summary>
+        <p class="mt-3 text-ink-500 leading-relaxed">
+          Идеальный момент. Помогаем с упаковкой канала с нуля и сразу даём правильное позиционирование.
+        </p>
+      </details>
+
+      <details class="card p-5 group reveal">
+        <summary class="flex items-center justify-between gap-4">
+          <span class="font-display font-bold text-lg">Как быстро увижу результат?</span>
+          <span class="faq-icon text-ink-500 text-2xl leading-none">+</span>
+        </summary>
+        <p class="mt-3 text-ink-500 leading-relaxed">
+          Стратегия — через 3 дня. Первая партия контента — через 7–10 дней. Замеры по охватам и переходам — со 2-й недели.
+        </p>
+      </details>
+
+      <details class="card p-5 group reveal">
+        <summary class="flex items-center justify-between gap-4">
+          <span class="font-display font-bold text-lg">Можно ли отказаться после пилота?</span>
+          <span class="faq-icon text-ink-500 text-2xl leading-none">+</span>
+        </summary>
+        <p class="mt-3 text-ink-500 leading-relaxed">
+          Да. Пилот не обязывает к продолжению. Все материалы — твои, забирай и используй.
+        </p>
+      </details>
+
+      <details class="card p-5 group reveal">
+        <summary class="flex items-center justify-between gap-4">
+          <span class="font-display font-bold text-lg">Чем вы отличаетесь от обычного SMM-агентства?</span>
+          <span class="faq-icon text-ink-500 text-2xl leading-none">+</span>
+        </summary>
+        <p class="mt-3 text-ink-500 leading-relaxed">
+          Агентство продаёт часы и креативы. Мы продаём готовый пакет под селлера маркетплейса — со стратегией, постами и сценариями, заточенными под логику покупателя WB и Ozon. Не делаем «лайфстайл ради лайфстайла» — делаем контент, который ведёт в карточку.
+        </p>
+      </details>
+
+      <details class="card p-5 group reveal">
+        <summary class="flex items-center justify-between gap-4">
+          <span class="font-display font-bold text-lg">Что если я уже работаю с подрядчиком?</span>
+          <span class="faq-icon text-ink-500 text-2xl leading-none">+</span>
+        </summary>
+        <p class="mt-3 text-ink-500 leading-relaxed">
+          Возьми пилот за 30 000 ₽ — сравнишь результат за месяц. Если наш пакет даст больше при меньшей цене, перейдёшь полностью. Если нет — никто никого не уговаривает.
+        </p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ФИНАЛЬНЫЙ CTA ===================== -->
+<section class="relative py-24 md:py-32 overflow-hidden bg-ink-900 text-white">
+  <img src="./backgrounds/bg-cta.webp" alt="" aria-hidden="true"
+       class="absolute inset-0 w-full h-full object-cover pointer-events-none opacity-80" loading="lazy" />
+  <!-- виньетка по углам, чтобы заголовок и кнопка читались -->
+  <div class="absolute inset-0 pointer-events-none"
+       style="background: radial-gradient(70% 70% at 50% 50%, rgba(10,10,11,0) 0%, rgba(10,10,11,0.55) 75%, rgba(10,10,11,0.85) 100%);"></div>
+
+  <div class="relative max-w-3xl mx-auto px-5 md:px-8 text-center">
+    <h2 class="font-display font-extrabold text-5xl md:text-6xl tracking-tight leading-[1.05] reveal">
+      Хватит писать
+      <span class="block bg-gradient-to-r from-accent to-indigo-400 bg-clip-text text-transparent">
+        посты по ночам.
+      </span>
+    </h2>
+    <p class="mt-6 text-lg md:text-xl text-ink-300 leading-relaxed reveal">
+      Пилотный месяц за 30 000 ₽. Без долгосрочных обязательств.
+    </p>
+    <div class="mt-10 reveal">
+      <button data-open-modal class="btn-accent text-lg !py-5 !px-8">
+        Оставить заявку
+      </button>
+    </div>
+    <p class="mt-5 text-sm text-ink-300 reveal">Свяжемся в течение 24 часов. Никакого спама.</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== ФУТЕР ===================== -->
+<footer class="border-t border-ink-100 py-12">
+  <div class="max-w-6xl mx-auto px-5 md:px-8 grid md:grid-cols-3 gap-10 items-start">
+    <div>
+      <a href="#" class="flex items-center gap-2 font-display font-bold text-lg">
+        <span class="inline-block w-2.5 h-2.5 rounded-full bg-accent"></span>
+        ContentFactory
+      </a>
+      <p class="text-sm text-ink-500 mt-3 max-w-xs leading-relaxed">
+        Фабрика контента для селлеров маркетплейсов. WB · Ozon.
+      </p>
+    </div>
+
+    <div class="text-sm text-ink-500 space-y-2">
+      <div class="font-semibold text-ink-900 mb-2">Контакты</div>
+      <div><a href="mailto:vinogradtrade@gmail.com" class="hover:text-ink-900 transition">vinogradtrade@gmail.com</a></div>
+      <div class="text-ink-300">Telegram: скоро</div>
+    </div>
+
+    <div class="text-sm text-ink-500 space-y-2">
+      <div class="font-semibold text-ink-900 mb-2">Документы</div>
+      <div><a href="/privacy.html" class="hover:text-ink-900 transition">Политика конфиденциальности</a></div>
+      <div><a href="/offer.html" class="hover:text-ink-900 transition">Договор оферты</a></div>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto px-5 md:px-8 mt-10 pt-6 border-t border-ink-100 text-xs text-ink-300 flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+    <div>© 2026 ContentFactory. Все права защищены.</div>
+    <div>ИП Виноградов Никита Эдуардович · ИНН 694100633128</div>
+  </div>
+</footer>
+
+<!-- ===================== МОДАЛКА ===================== -->
+<div id="modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+  <div class="modal-backdrop absolute inset-0" data-close-modal></div>
+
+  <div class="relative card shadow-card w-full max-w-md p-6 md:p-8" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button data-close-modal class="absolute top-4 right-4 w-9 h-9 rounded-full hover:bg-ink-50 flex items-center justify-center text-ink-500" aria-label="Закрыть">
+      <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+
+    <!-- Form state -->
+    <div data-modal-form>
+      <div class="text-sm font-medium text-accent uppercase tracking-widest mb-2">Заявка на пилот</div>
+      <h3 id="modal-title" class="font-display font-extrabold text-2xl tracking-tight leading-tight">
+        Один шаг — и в течение 24 часов мы на связи
+      </h3>
+
+      <form id="lead-form" class="mt-6 space-y-4" novalidate>
+        <div>
+          <label class="label" for="lf-name">Имя</label>
+          <input class="input" id="lf-name" name="name" type="text" required placeholder="Как к вам обращаться" />
+        </div>
+        <div>
+          <label class="label" for="lf-contact">Telegram или телефон</label>
+          <input class="input" id="lf-contact" name="contact" type="text" required placeholder="@username или +7..." />
+        </div>
+        <div>
+          <label class="label" for="lf-category">Категория</label>
+          <select class="input" id="lf-category" name="category" required>
+            <option value="">Выберите категорию</option>
+            <option>Одежда</option>
+            <option>Дом</option>
+            <option>Красота</option>
+            <option>Электроника</option>
+            <option>Детские</option>
+            <option>Другое</option>
+          </select>
+        </div>
+        <div>
+          <label class="label" for="lf-revenue">Оборот в месяц (опционально)</label>
+          <select class="input" id="lf-revenue" name="revenue">
+            <option value="">Не указывать</option>
+            <option>До 1 млн</option>
+            <option>1-3 млн</option>
+            <option>3-5 млн</option>
+            <option>5-10 млн</option>
+            <option>Больше 10 млн</option>
+          </select>
+        </div>
+
+        <label class="flex gap-3 items-start cursor-pointer mt-1">
+          <input type="checkbox" id="lf-consent" name="consent" required
+                 class="mt-1 w-4 h-4 rounded border-ink-300 text-accent focus:ring-accent focus:ring-offset-0" />
+          <span class="text-xs text-ink-500 leading-relaxed">
+            Я ознакомлен с <a href="/offer.html" target="_blank" rel="noopener" class="underline hover:text-ink-900">договором-офертой</a> и <a href="/privacy.html" target="_blank" rel="noopener" class="underline hover:text-ink-900">политикой конфиденциальности</a>, согласен с их условиями и даю согласие на обработку персональных данных.
+          </span>
+        </label>
+
+        <button type="submit" class="btn-accent w-full mt-2">Отправить</button>
+      </form>
+    </div>
+
+    <!-- Success state -->
+    <div data-modal-success class="hidden text-center py-4">
+      <div class="w-14 h-14 rounded-full bg-accent/15 text-accent flex items-center justify-center mx-auto mb-5">
+        <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h3 class="font-display font-extrabold text-2xl tracking-tight">Спасибо!</h3>
+      <p class="text-ink-500 mt-3 leading-relaxed">
+        Свяжемся с вами в течение 24 часов. Если хотите ускорить — напишите напрямую:
+      </p>
+      <a href="https://t.me/" class="btn-accent inline-flex mt-6">Написать в Telegram</a>
+    </div>
+  </div>
+</div>
+
+<script src="./script.js" defer></script>
+</body>
+</html>

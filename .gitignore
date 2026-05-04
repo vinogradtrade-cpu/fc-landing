@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Локальные оригиналы изображений (не лезут в репу — пережатые .webp в assets/ единственно правильные)
+assets/.backup_originals/
+
+# Logs / tmp
+*.log
+.tmp/
+
+# Secrets — никогда не коммитим
+.env
+.env.*
+!.env.example
+
+# Локальные SSH-артефакты, на всякий случай
+deploy_key
+deploy_key.pub
+*.pem
