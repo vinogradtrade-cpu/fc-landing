@@ -76,6 +76,13 @@
     // fetch('https://example.com/webhook', { method: 'POST', body: JSON.stringify(data) })
     console.log('Lead submitted (stub):', data);
 
+    if (typeof window.ym === 'function') {
+      window.ym(109036934, 'reachGoal', 'lead_submitted', {
+        category: data.category,
+        revenue: data.revenue || 'не указано',
+      });
+    }
+
     formWrap?.classList.add('hidden');
     successWrap?.classList.remove('hidden');
   });
