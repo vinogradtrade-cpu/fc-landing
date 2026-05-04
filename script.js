@@ -58,12 +58,14 @@
     if (e.key === 'Escape' && !modal.classList.contains('hidden')) close();
   });
 
-  // Submit handler — на этапе скелета просто эмулируем успех.
-  // На проде заменить на webhook (Telegram-бот / Formspree).
-  form?.addEventListener('submit', (e) => {
+  // Submit handler — отправляет лид на /api/lead, который пересылает в Telegram-группу.
+  form?.addEventListener('submit', async (e) => {
     e.preventDefault();
     const data = Object.fromEntries(new FormData(form).entries());
     const consent = form.querySelector('#lf-consent');
+    const errEl = form.querySelector('[data-form-error]');
+    errEl?.classList.add('hidden');
+
     if (!data.name || !data.contact || !data.category || !consent?.checked) {
       form.querySelectorAll('[required]').forEach((el) => {
         const invalid = el.type === 'checkbox' ? !el.checked : !el.value;
@@ -72,18 +74,56 @@
       });
       return;
     }
-    // TODO: replace with real webhook
-    // fetch('https://example.com/webhook', { method: 'POST', body: JSON.stringify(data) })
-    console.log('Lead submitted (stub):', data);
 
-    if (typeof window.ym === 'function') {
-      window.ym(109036934, 'reachGoal', 'lead_submitted', {
-        category: data.category,
-        revenue: data.revenue || 'не указано',
-      });
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn?.textContent;
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Отправляем…';
     }
 
-    formWrap?.classList.add('hidden');
-    successWrap?.classList.remove('hidden');
+    try {
+      const res = await fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: data.name,
+          contact: data.contact,
+          category: data.category,
+          revenue: data.revenue || '',
+          consent: true,
+          page: location.href,
+          website: data.website || '',
+        }),
+      });
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok || !json.ok) {
+        const code = json.error || `http_${res.status}`;
+        throw new Error(code);
+      }
+
+      if (typeof window.ym === 'function') {
+        window.ym(109036934, 'reachGoal', 'lead_submitted', {
+          category: data.category,
+          revenue: data.revenue || 'не указано',
+        });
+      }
+
+      formWrap?.classList.add('hidden');
+      successWrap?.classList.remove('hidden');
+    } catch (err) {
+      const msg = String(err.message || err);
+      const human = msg === 'rate_limited'
+        ? 'Слишком много заявок с этого IP. Попробуй через минуту.'
+        : 'Не удалось отправить заявку. Попробуй ещё раз или напиши на vinogradtrade@gmail.com';
+      if (errEl) {
+        errEl.textContent = human;
+        errEl.classList.remove('hidden');
+      }
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText || 'Отправить';
+      }
+    }
   });
 })();
